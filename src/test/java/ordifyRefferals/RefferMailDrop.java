@@ -1,4 +1,6 @@
 package ordifyRefferals;
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -10,9 +12,10 @@ public class RefferMailDrop {
 		
 		public static void MailDropcc(String email) throws InterruptedException {
 
-			for (int i = 1; i <100; i++) {
+			for (int i = 100; i <200; i++) {
 
 				WebDriver driver = new ChromeDriver();
+//				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 				driver.get("https://referral.ordify.world?r=VBCTKQEU");
 				driver.findElement(By.name("email")).sendKeys(email + i + "@maildrop.cc");
@@ -46,51 +49,51 @@ public class RefferMailDrop {
 		
 		@Test
 		public void test01() throws InterruptedException {
-			MailDropcc("paul1c");
+			MailDropcc("paul1rlia");
 		}
 		
 		@Test
 		public void test02() throws InterruptedException {
-			MailDropcc("johndoe1c");
+			MailDropcc("johndoe1rlia");
 		}
 		
 		@Test
 		public void test03() throws InterruptedException {
-			MailDropcc("david1c");
+			MailDropcc("david1rlia");
 		}
 		
 		@Test
 		public void test04() throws InterruptedException {
-			MailDropcc("helen1c");
+			MailDropcc("helen1rlia");
 		}
 		
 		@Test
 		public void test05() throws InterruptedException {
-			MailDropcc("joshua1c");
+			MailDropcc("joshua1rlia");
 		}
 		
 		@Test
 		public void test06() throws InterruptedException {
-			MailDropcc("tom1c");
+			MailDropcc("tom1rlia");
 		}
 		
 		@Test
 		public void test07() throws InterruptedException {
-			MailDropcc("denies1c");
+			MailDropcc("denies1rlia");
 		}
 		
 		@Test
 		public void test08() throws InterruptedException {
-			MailDropcc("noway1c");
+			MailDropcc("noway1rlia");
 		}
 		@Test
 		public void test09() throws InterruptedException {
-			MailDropcc("moon1c");
+			MailDropcc("moon1rlia");
 		}
 		
 		@Test
 		public void test10() throws InterruptedException {
-			MailDropcc("pump1c");
+			MailDropcc("pump1rlia");
 		}
 		
 		@AfterTest
